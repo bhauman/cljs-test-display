@@ -52,7 +52,7 @@ browser you can use `cljs-test-display`.
 > You will need to be familiar with how to create a ClojureScript
 > application and run it in a browser.
 
-### dependencies
+### Dependencies
 
 You will need to add `[com.bhauman/cljs-test-display "0.1.0"]` to your
 project's dependencies *along with* a recent version of
@@ -60,15 +60,13 @@ ClojureScript. It has been tested with
 `[org.clojure/cojurescript 1.10.238]` and above, but it should work
 with almost any version of ClojureScript that includes `cljs.test`.
 
-### test runner integration
+### Test runner integration
 
-You will need to require `cljs-test-display.core` in your test runner
-namespace. 
-
-Then make a call to `cljs-test-display.core/init!`.
+First, you will need to require `cljs-test-display.core` in your test
+runner, then call the `cljs-test-display.core/init!` function.
 `init!` returns a `cljs.test` environment much like
-`cljs.test/empty-env` initialized with the correct formatter key so
-that `cljs-test-display` is engaged.
+`cljs.test/empty-env` initialized so that `cljs-test-display` is
+engaged.
 
 Example: `test.example/test_runner.cljs`
 
@@ -93,10 +91,10 @@ Example: `test.example/test_runner.cljs`
 ```
 
 It is important to note that the `cljs-test-display.core/init!`
-function is designed to be called repeatedly in the same environment
+function is designed to be called repeatedly in the same environment,
 to facilitate hot reloading and test re-runs.
 
-> For the best development experience, is best to invoke your test
+> For the best development experience, invoke your test
 > runner after every hot reload.
 
 ## Development
@@ -107,13 +105,13 @@ running.
 
     clojure -A:build
 
-This will auto compile and send all changes to the browser without the
+This will auto-compile and send all changes to the browser without the
 need to reload. After the compilation process is complete, you will
 get a Browser Connected REPL. An easy way to try it is:
 
     (js/alert "Am I connected?")
 
-and you should see an alert in the browser window.
+This should cause an alert to pop up in the browser window.
 
 You will now be able to live edit the code in
 `src/cljs-test-display/core.cljs` and live edit the CSS in
