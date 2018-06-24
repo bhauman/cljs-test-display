@@ -1,0 +1,282 @@
+body {
+    margin: 0px;
+}
+
+.container {
+    font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif!important;
+    font-size: 16px;
+    line-height: 1.4285;
+    margin: 0px auto;
+    padding: 0px 10px;
+}
+
+/* report header */
+
+#report-header {
+    background-color: #27437b;
+    color: white;
+}
+
+#report-header .report-body {
+    padding: 20px 10px;
+    /* hack */
+    padding-right: 0px;
+}
+
+#report-header.tests-fail {
+    background-color: #7b2727;
+}
+
+#report-header.tests-succeed {
+    background-color: #277b2d;
+}
+
+#report-header .page-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+#report-header .test-title {
+    font-size: 40px;
+    margin-left: 15px;
+}
+
+/* controls */
+
+.controls {
+    margin-top: 10px;
+    height: 10px;
+}
+
+.controls button {
+    float: right;
+    border-radius: 5px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 11px;
+    background-color: #8e8e8e;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    border: none;
+    letter-spacing: 0.8px;
+}
+
+.controls button:hover {
+    background: #a9a9a9;
+    text-decoration: none;
+}
+/* summary */
+
+.summary-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-body .report-number {
+    margin-right: 20px;
+    font-family: monospace;
+    font-size: 2em;
+}
+
+.summary-body .total-tests {
+    font-size: 0.75em;
+    line-height: 1.2em;
+}
+
+.summary-body .test-counts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.summary-body .test-counts > div {
+    margin-right: 10px;
+}
+
+/* namespace */
+
+.test-ns h2 {
+    font-weight: normal;
+    color: #333;
+}
+
+/* var line */
+
+.var-header {
+    color: #666;    
+    margin: 8px 0px;
+    border-bottom: 1px solid #e0e0e0;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.test-var-line {
+    color: #999;
+    font-size: 0.7em;
+}
+
+.test-var-line span {
+    font-family: monospace;
+}
+
+/* passing test dot */
+
+.test-passing {
+    display: inline-block;
+    width: 12px;
+    height: 12px;    
+    border: 1px solid #98bd8b;
+    background-color: rgb(199, 225, 160);
+}
+
+.test-passing + .test-passing {
+    border-left: none;
+}
+
+/* ensure vertical space between passing tests and failing tests */
+
+.test-passing + .test-fail {
+    margin-top: 8px;
+}
+
+.test-fail + .test-passing {
+    margin-top: 14px;
+}
+
+/* failed tests */
+
+.test-fail {
+    color: #a94442;
+    border: 1px solid rgb(236, 196, 196);
+    border-left: 8px solid rgb(236, 196, 196);
+    background-color: rgb(254, 254, 244);
+}
+
+.fail-body {
+    padding: 10px 24px;
+}
+
+.contexts {
+    padding: 0px 5px;
+    font-size: 0.8em;
+    background-color: #f1f1f1;
+}
+
+.test-message {
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+
+pre {
+    margin: 0px;
+    word-break: normal;
+    word-wrap: normal;
+    overflow-x: scroll;
+    margin-top: 2px;
+    margin-bottom: 2px;    
+}
+
+pre code {
+    font-size: 0.8em;
+    color: #333;
+    overflow-x: auto;
+}
+
+.actual {
+    position: relative;
+}
+
+.actual pre {
+    margin-left: 20px;
+}
+
+.actual .arrow {
+    position: absolute;
+    font-size: 0.8em;
+    top: 4px;
+}
+
+/* errors */
+
+.test-error {
+    border-left: 8px solid #b94848;
+}
+
+.error-prefix {
+    color: #a94442;
+    font-weight: bold;
+}
+
+.error-message {
+    font-size: 0.8em;
+}
+
+.view-stacktrace {
+    font-size: 0.8em;
+    color: #888;
+}
+
+/* footer */
+
+.footer {
+    margin-top: 30px;
+    min-height: 150px;
+    background-color: #ddd;
+}
+
+.footer .container {
+    padding-top: 30px;
+    color: #555;
+    font-size: 0.85em;
+    display: flex;
+    justify-content: center;
+}
+
+.control-key {
+    display: inline-block;
+    font-weight: bold;
+    background-color: white;
+    padding: 1px 4px;
+    border-radius: 2px;
+}
+
+/* responsive */
+
+@media (min-width: 576px) {
+    .container {
+	width: 576px;
+    }
+    .controls {
+	height: 0px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+	width: 768px;
+    }
+}
+
+/* functionality */
+
+.hide-passing .test-passing + .test-fail,
+.hide-passing .test-fail + .test-passing{
+    margin-top: 0px;
+}
+
+.hide-passing .test-ns,
+.hide-passing .test-var,
+.hide-passing .test-passing {
+    display: none;
+}
+
+.hide-passing .test-ns.has-errors,
+.hide-passing .test-ns.has-failures,
+.hide-passing .test-var.has-errors,
+.hide-passing .test-var.has-failures {
+    display: block;
+}

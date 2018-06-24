@@ -1,0 +1,3 @@
+^{:css-dirs ["resources/public/com/bhauman/cljs-test-display"]
+  :watch-dirs ["src" "dev" "test"]}
+{:main cljs-test-display.dev}
