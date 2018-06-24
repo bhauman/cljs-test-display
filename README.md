@@ -42,35 +42,62 @@ browser you can use `cljs-test-display`.
 Example: `test.example/test_runner.cljs`
 
 ```clojure
+(cljs.test/run-tests 
+  (cljs-test.display.core/init! "app") ;;<-- initialize cljs-test-display here
+  'example.foo-test 
+  'example.bar-test 
+  'example.bax-test)
+```
+
+# Usage
+
+> You will need to be familiar with how to create a ClojureScript
+> application and run it in a browser.
+
+You will need to add `[com.bhauman/cljs-test-display "0.1.0"]` to your
+projects dependencies *along with* a recent version of ClojureScript. For
+example you can use `[org.clojure/cojurescript 1.10.238]`.
+
+The API is simple you will need to include `cljs-test-display.core`
+into your test runner namespace. And then make a call to
+`cljs-test-display.core/init!`.  `init!` returns a `cljs.test`
+environment much like `cljs.test/empty-env` initialized with the
+correct formatter key so that `cljs-test-display` is enguaged.
+
+```clojure
 (ns example.test-runner
   (:require 
     [cljs.test]
-    [cljs-test-display.core :as display]
+    [cljs-test-display.core]
     [example.foo-test]
     [example.bar-test]
     [example.baz-test])
   (:require-macros
-    [cljs.test :refer [run-tests]]))
+    [cljs.test]))
 	
 (defn test-run []
-  ;; where "app" is the html node where you want to mount the tests
-  (run-tests (display/init! "app")
-             'example.foo-test 
-             'example.bar-test 
-             'example.bax-test))
+  ;; where "app" is the HTML node where you want to mount the tests
+  (cljs.test/run-tests 
+    (cljs.test.display.core/init! "app") ;;<-- initialize cljs-test-display here
+    'example.foo-test 
+    'example.bar-test 
+    'example.bax-test))
 ```
 
+It is important to not that `init!` is designed to be called
+repeatedly in the same environment to facilitate hot reloading and
+test re-runs.
 
-# Usage
-
-
-
+Of course it is best to call the above `test-run` after any hot
+reload takes place to get the best coding experience.
 
 ## Development
 
-To get an interactive development environment run:
+You shold be able to work on `cljs-test-display` by forking/cloning
+this repo and then `cd` into the `cljs-test-display` directory and
+running.
 
-    clojure -A:fig:build
+    clojure -A:build
 
 This will auto compile and send all changes to the browser without the
 need to reload. After the compilation process is complete, you will
@@ -80,18 +107,16 @@ get a Browser Connected REPL. An easy way to try it is:
 
 and you should see an alert in the browser window.
 
+You will not be able to live edit the code in
+`src/cljs-test-display/core.cljs` and live edit the css in
+`resources/public/com/bhauman/cljs-test-display/css/style.css`.
+
 To clean all compiled files:
 
     rm -rf target/public
 
-To create a production build run:
-
-	rm -rf target/public
-	clojure -A:fig:min
-
-
 ## License
 
-Copyright © 2018 FIXME
+Copyright © 2018 Bruce Hauman
 
 Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
