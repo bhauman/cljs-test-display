@@ -17,6 +17,10 @@ browser you can use `cljs-test-display`.
 ## Features
 
 * fully compatible with `cljs.test`
+* Small understandable codebase
+* Only a ClojureScript library no server side component
+* No dependencies
+
 * favicon feedback
 
 <img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-tab.png" width="500"/>
@@ -56,11 +60,6 @@ Example: `test.example/test_runner.cljs`
              'example.bax-test))
 ```
 
-* Small understandable codebase
-
-* Only a ClojureScript library no server side component
-
-* No dependencies
 
 # Usage
 
