@@ -3,7 +3,9 @@
 `cljs-test-display` is a library that produces a visual display of an
 in browser `cljs.test` run.
 
-![cljs-test-display screen shot](https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-screenshot.png)
+<img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-screenshot.png" width="500"/>
+
+![cljs-test-display screen shot](
 
 ## Overview
 
@@ -14,15 +16,15 @@ ClojureScript tests as they run.
 
 ### favicon feedback
 
-<img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-tab.png" width="600"/>
+<img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-tab.png" width="500"/>
 
 ### adds valuable stacktraces for errors in the browser console
 
-<img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-error-stacktrace.png" width="400"/>
+<img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-error-stacktrace.png" width="500"/>
 
 ### uses the Web Notification API to provide system notifications
 
-<img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-system-notifications.png" width="200"/>
+<img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-system-notifications.png" width="300"/>
 
 ### Easy to integrate
 
