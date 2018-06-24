@@ -25,7 +25,7 @@ browser you can use `cljs-test-display`.
 
 <img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-tab.png" width="500"/>
 
-* Numbered stacktraces for exceptions in the dev console
+* Numbered stacktraces for test exceptions in the dev console
 
 <img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-error-stacktrace.png" width="500"/>
 
@@ -40,6 +40,7 @@ browser you can use `cljs-test-display`.
 * Straightforward integration
 
 ```clojure
+;; where "app" is the HTML node where you want to mount the tests
 (cljs.test/run-tests 
   (cljs-test.display.core/init! "app") ;;<-- initialize cljs-test-display here
   'example.foo-test 
