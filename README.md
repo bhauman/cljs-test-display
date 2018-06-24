@@ -2,6 +2,16 @@
 
 [![Clojars Project](https://img.shields.io/clojars/v/com.bhauman/cljs-test-display.svg)](https://clojars.org/com.bhauman/cljs-test-display)
 
+`cljs-test-display` is a library that produces a visual display of an
+in-browser ClojureScript test run.
+
+<img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-screenshot.png" width="500"/>
+
+## Overview
+
+`cljs-test-display` is a ClojureScript library that you can use
+along with your web-based test runner to provide visual and system
+feedback for your test runs.
 
 If you have tests written with `cljs.test` and you can run them in the
 browser you can use `cljs-test-display`.
@@ -15,7 +25,7 @@ browser you can use `cljs-test-display`.
 
 * Red/green favicon feedback
 
-<img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-tab.png" width="500"/>
+<img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-tab.png" border="1" width="500"/>
 
 * Numbered stacktraces for test exceptions in the dev console
 
