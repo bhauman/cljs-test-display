@@ -39,8 +39,6 @@ browser you can use `cljs-test-display`.
 
 * easy to integrate
 
-Example: `test.example/test_runner.cljs`
-
 ```clojure
 (cljs.test/run-tests 
   (cljs-test.display.core/init! "app") ;;<-- initialize cljs-test-display here
@@ -63,6 +61,8 @@ into your test runner namespace. And then make a call to
 `cljs-test-display.core/init!`.  `init!` returns a `cljs.test`
 environment much like `cljs.test/empty-env` initialized with the
 correct formatter key so that `cljs-test-display` is enguaged.
+
+Example: `test.example/test_runner.cljs`
 
 ```clojure
 (ns example.test-runner
@@ -107,7 +107,7 @@ get a Browser Connected REPL. An easy way to try it is:
 
 and you should see an alert in the browser window.
 
-You will not be able to live edit the code in
+You will now be able to live edit the code in
 `src/cljs-test-display/core.cljs` and live edit the css in
 `resources/public/com/bhauman/cljs-test-display/css/style.css`.
 
