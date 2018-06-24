@@ -1,14 +1,14 @@
 # cljs-test-display
 
 `cljs-test-display` is a library that produces a visual display of an
-in browser `cljs.test` run.
+in-browser ClojureScript run.
 
 <img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-screenshot.png" width="500"/>
 
 ## Overview
 
 `cljs-test-display` is a ClojureScript library that you can use
-along with your web based test runner to provide visual and system
+along with your web-based test runner to provide visual and system
 feedback for your test runs.
 
 If you have tests written with `cljs.test` and you can run them in the
@@ -16,28 +16,28 @@ browser you can use `cljs-test-display`.
 
 ## Features
 
-* fully compatible with `cljs.test`
+* Fully compatible with `cljs.test`
 * Small understandable codebase
-* Only a ClojureScript library no server side component
+* Only a ClojureScript library, no server-side component
 * No dependencies
 
-* favicon feedback
+* Red/green favicon feedback
 
 <img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-tab.png" width="500"/>
 
-* provides numbered stacktraces for errors in the browser console
+* Numbered stacktraces for exceptions in the dev console
 
 <img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-error-stacktrace.png" width="500"/>
 
-* toggle visibility of passing tests with a key-press
+* Hide/show passing tests with a key-press
 
 <img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-toggle-visible.png" width="500"/>
 
-* provides system notifications for passing and failing test runs
+* System notifications for passing and failing test runs
 
 <img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-system-notifications.png" width="300"/>
 
-* straight-forward integration
+* Straightforward integration
 
 ```clojure
 (cljs.test/run-tests 

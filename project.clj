@@ -7,7 +7,7 @@
   :min-lein-version "2.7.1"
 
   :dependencies [[org.clojure/clojure "1.9.0"]
-                 [org.clojure/clojurescript "1.10.238"] :scope :provided]
+                 [org.clojure/clojurescript "1.10.238" :scope "provided"]]
 
   :source-paths ["src"]
 
