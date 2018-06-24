@@ -7,7 +7,50 @@ in browser `cljs.test` run.
 
 ## Overview
 
+`cljs-test-display` is a light simple library that displays your
+ClojureScript tests as they run.
 
+## Features
+
+### favicon feedback
+
+![red favicon visual feedback](https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-tab.png)
+
+### adds valuable stacktraces for errors in the browser console
+
+![stacktrace in devtools console](https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-error-stacktrace.png)
+
+### uses the Web Notification API to provide system notifications
+
+![clojurescript tests system notifications](https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-system-notifications.png)
+
+### Easy to integrate
+
+Example: `test.example/test_runner.cljs`
+
+```clojure
+(ns example.test-runner
+  (:require 
+    [cljs.test]
+	[cljs-test-display.core :as display]  
+    [example.foo-test]
+    [example.bar-test]
+    [example.baz-test])
+  (:require-macros
+    [cljs.test :refer [run-tests]]))
+	
+(defn test-run []
+  ;; where "app" is the html node where you want to mount the tests
+  (run-tests (display/init! "app")
+             'example.foo-test 
+             'example.bar-test 
+             'example.bax-test))
+```
+
+
+
+
+* 
 
 ## Development
 
