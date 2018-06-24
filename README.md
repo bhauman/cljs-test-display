@@ -37,7 +37,7 @@ browser you can use `cljs-test-display`.
 
 <img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-system-notifications.png" width="300"/>
 
-* easy to integrate
+* straight-forward integration
 
 ```clojure
 (cljs.test/run-tests 
@@ -102,7 +102,7 @@ to facilitate hot reloading and test re-runs.
 ## Development
 
 You should be able to work on `cljs-test-display` by forking/cloning
-this repo and then `cd` into the `cljs-test-display` directory and
+this repo and then `cd`ing into the `cljs-test-display` directory and
 running.
 
     clojure -A:build
