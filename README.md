@@ -16,25 +16,24 @@ browser you can use `cljs-test-display`.
 
 ## Features
 
-### fully compatible with `cljs.test`
-
-### favicon feedback
+* fully compatible with `cljs.test`
+* favicon feedback
 
 <img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-tab.png" width="500"/>
 
-### provides numbered stacktraces for errors in the browser console
+* provides numbered stacktraces for errors in the browser console
 
 <img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-error-stacktrace.png" width="500"/>
 
-### toggle visibility of passing tests with a keypress
+* toggle visibility of passing tests with a keypress
 
 <img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-toggle-visible.png" width="500"/>
 
-### provides system notifications for passing and failing test runs
+* provides system notifications for passing and failing test runs
 
 <img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-system-notifications.png" width="300"/>
 
-### easy to integrate
+* easy to integrate
 
 Example: `test.example/test_runner.cljs`
 
@@ -57,13 +56,13 @@ Example: `test.example/test_runner.cljs`
              'example.bax-test))
 ```
 
-### Small understandable codebase
+* Small understandable codebase
 
-### Only a ClojureScript library no server side component
+* Only a ClojureScript library no server side component
 
-### No dependencies
+* No dependencies
 
-## Usage
+# Usage
 
 
 
