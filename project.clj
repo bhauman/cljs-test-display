@@ -1,6 +1,6 @@
-(defproject com.bhauman/cljs-test-display "0.1.0-SNAPSHOT"
+(defproject com.bhauman/cljs-test-display "0.1.0"
   :description "Provides a visual display for ClojureScript tests."
-  :url "http://example.com/FIXME"
+  :url "https://github.com/bhauman/cljs-test-display"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
@@ -18,7 +18,7 @@
   :profiles {:dev {:dependencies [[com.bhauman/figwheel-main "0.1.2"]
                                   [com.bhauman/rebel-readline-cljs "0.1.3"]
                                   [org.clojure/clojurescript "1.10.238"]]
-                   :source-paths ["src" "dev"]
+                   :source-paths ["src" "dev" "test"]
                    :resource-paths ["resources" "dev-resources" "target"]
                    ;; need to add the compliled assets to the :clean-targets
                    :clean-targets ^{:protect false} ["target/public" :target-path]}})
