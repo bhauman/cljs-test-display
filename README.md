@@ -15,7 +15,7 @@ browser you can use `cljs-test-display`.
 
 * Red/green favicon feedback
 
-<img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-tab.png" width="500" border="1"/>
+<img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-tab.png" width="500"/>
 
 * Numbered stacktraces for test exceptions in the dev console
 
