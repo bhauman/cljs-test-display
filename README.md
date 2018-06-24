@@ -8,8 +8,8 @@ in browser `cljs.test` run.
 ## Overview
 
 `cljs-test-display` is a ClojureScript library that you can use
-along with your browser based test runner to provide visual and system
-feedback for you test runs.
+along with your web based test runner to provide visual and system
+feedback for your test runs.
 
 If you have tests written with `cljs.test` and you can run them in the
 browser you can use `cljs-test-display`.
@@ -29,7 +29,7 @@ browser you can use `cljs-test-display`.
 
 <img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-error-stacktrace.png" width="500"/>
 
-* toggle visibility of passing tests with a keypress
+* toggle visibility of passing tests with a key-press
 
 <img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-toggle-visible.png" width="500"/>
 
@@ -44,7 +44,7 @@ browser you can use `cljs-test-display`.
   (cljs-test.display.core/init! "app") ;;<-- initialize cljs-test-display here
   'example.foo-test 
   'example.bar-test 
-  'example.bax-test)
+  'example.baz-test)
 ```
 
 # Usage
@@ -60,7 +60,7 @@ The API is simple you will need to include `cljs-test-display.core`
 into your test runner namespace. And then make a call to
 `cljs-test-display.core/init!`.  `init!` returns a `cljs.test`
 environment much like `cljs.test/empty-env` initialized with the
-correct formatter key so that `cljs-test-display` is enguaged.
+correct formatter key so that `cljs-test-display` is engaged.
 
 Example: `test.example/test_runner.cljs`
 
@@ -81,7 +81,7 @@ Example: `test.example/test_runner.cljs`
     (cljs.test.display.core/init! "app") ;;<-- initialize cljs-test-display here
     'example.foo-test 
     'example.bar-test 
-    'example.bax-test))
+    'example.baz-test))
 ```
 
 It is important to not that `init!` is designed to be called
@@ -93,7 +93,7 @@ reload takes place to get the best coding experience.
 
 ## Development
 
-You shold be able to work on `cljs-test-display` by forking/cloning
+You should be able to work on `cljs-test-display` by forking/cloning
 this repo and then `cd` into the `cljs-test-display` directory and
 running.
 
@@ -108,7 +108,7 @@ get a Browser Connected REPL. An easy way to try it is:
 and you should see an alert in the browser window.
 
 You will now be able to live edit the code in
-`src/cljs-test-display/core.cljs` and live edit the css in
+`src/cljs-test-display/core.cljs` and live edit the CSS in
 `resources/public/com/bhauman/cljs-test-display/css/style.css`.
 
 To clean all compiled files:
