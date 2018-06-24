@@ -3,7 +3,7 @@
 `cljs-test-display` is a library that produces a visual display of an
 in browser `cljs.test` run.
 
-![cljs-test-display screen shot](https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-screenshot.png)
+
 
 ## Overview
 
