@@ -1,7 +1,7 @@
 # cljs-test-display
 
 `cljs-test-display` is a library that produces a visual display of an
-in-browser ClojureScript run.
+in-browser ClojureScript test run.
 
 <img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-screenshot.png" width="500"/>
 
