@@ -1,5 +1,7 @@
 # cljs-test-display
 
+[![Clojars Project](https://img.shields.io/clojars/v/com.bhauman/cljs-test-display.svg)](https://clojars.org/com.bhauman/cljs-test-display)
+
 `cljs-test-display` is a library that produces a visual display of an
 in-browser ClojureScript test run.
 
