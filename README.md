@@ -14,15 +14,15 @@ ClojureScript tests as they run.
 
 ### favicon feedback
 
-![red favicon visual feedback](https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-tab.png)
+<img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-tab.png" width="600"/>
 
 ### adds valuable stacktraces for errors in the browser console
 
-![stacktrace in devtools console](https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-error-stacktrace.png)
+<img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-error-stacktrace.png" width="400"/>
 
 ### uses the Web Notification API to provide system notifications
 
-![clojurescript tests system notifications](https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-system-notifications.png)
+<img src="https://s3.amazonaws.com/bhauman-blog-images/cljs-test-display-system-notifications.png" width="200"/>
 
 ### Easy to integrate
 
