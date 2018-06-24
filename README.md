@@ -52,15 +52,23 @@ browser you can use `cljs-test-display`.
 > You will need to be familiar with how to create a ClojureScript
 > application and run it in a browser.
 
-You will need to add `[com.bhauman/cljs-test-display "0.1.0"]` to your
-projects dependencies *along with* a recent version of ClojureScript. For
-example you can use `[org.clojure/cojurescript 1.10.238]`.
+### dependencies
 
-The API is simple you will need to include `cljs-test-display.core`
-into your test runner namespace. And then make a call to
-`cljs-test-display.core/init!`.  `init!` returns a `cljs.test`
-environment much like `cljs.test/empty-env` initialized with the
-correct formatter key so that `cljs-test-display` is engaged.
+You will need to add `[com.bhauman/cljs-test-display "0.1.0"]` to your
+project's dependencies *along with* a recent version of
+ClojureScript. It has been tested with
+`[org.clojure/cojurescript 1.10.238]` and above, but it should work
+with almost any version of ClojureScript that includes `cljs.test`.
+
+### test runner integration
+
+You will need to require `cljs-test-display.core` in your test runner
+namespace. 
+
+Then make a call to `cljs-test-display.core/init!`.
+`init!` returns a `cljs.test` environment much like
+`cljs.test/empty-env` initialized with the correct formatter key so
+that `cljs-test-display` is engaged.
 
 Example: `test.example/test_runner.cljs`
 
@@ -84,12 +92,12 @@ Example: `test.example/test_runner.cljs`
     'example.baz-test))
 ```
 
-It is important to not that `init!` is designed to be called
-repeatedly in the same environment to facilitate hot reloading and
-test re-runs.
+It is important to note that the `cljs-test-display.core/init!`
+function is designed to be called repeatedly in the same environment
+to facilitate hot reloading and test re-runs.
 
-Of course it is best to call the above `test-run` after any hot
-reload takes place to get the best coding experience.
+> For the best development experience, is best to invoke your test
+> runner after every hot reload.
 
 ## Development
 
