@@ -71,7 +71,7 @@ runner, then call the `cljs-test-display.core/init!` function.
 `cljs.test/empty-env` initialized so that `cljs-test-display` is
 engaged.
 
-Example: `test.example/test_runner.cljs`
+Example: `test/example/test_runner.cljs`
 
 ```clojure
 (ns example.test-runner
@@ -154,11 +154,11 @@ For Example:
 <html>
   <head>
     <!-- override injected css -->
-	<link id="cljs-test-display-style" type="text/css" href="css/my-css.css">
+    <link id="cljs-test-display-style" type="text/css" href="css/my-css.css">
   </head>
   <body>
   
-	;; you can also place CSS here if you only wish to ammend the CSS
+    ;; you can also place CSS here if you only wish to ammend the CSS
 	
     <div id="app"></div>
     <script src="[path to your compiled cljs]" type="text/javascript"></script>
