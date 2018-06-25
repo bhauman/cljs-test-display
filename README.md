@@ -93,12 +93,79 @@ Example: `test.example/test_runner.cljs`
     'example.baz-test))
 ```
 
+Providing `init!` the element id is optional: `app` is the default.
+
 It is important to note that the `cljs-test-display.core/init!`
 function is designed to be called repeatedly in the same environment,
 to facilitate hot reloading and test re-runs.
 
 > For the best development experience, invoke your test
 > runner after every hot reload.
+
+### HTML host file
+
+The HTML that hosts the tests can be very simple.
+
+Example `resources/public/tests.html` file:
+
+```html
+<html>
+  <!-- the head element is required as this is where we add CSS and favicon elements -->
+  <head></head>
+  <body>
+    <div id="app"></div>
+    <script src="[path to your compiled cljs]" type="text/javascript"></script>
+  </body>
+</html>
+```
+
+## Configuration
+
+You can configure the behavior by adding keys to the
+`:closure-defines` key in your ClojureScript compiler options.
+
+```clojure
+{:main example.core
+ :output-to "main.js"
+ ...
+ :closure-defines {
+    ;; set the element id of where the tests will mount
+	cljs-test-display.core/root-node-id "test-app" ;; default "app"
+	
+	;; disable the favicon changing behavior
+	cljs-test-display.core/change-favicon false    ;; default true
+	
+	;; disable the system notifications
+	cljs-test-display.core/notifications  false    ;; default true
+	
+	;; enable the printing of test results
+	cljs-test-display.core/printing       true     ;; default false
+ }}
+```
+
+### Providing your own style 
+
+You can override the injected CSS by supplying your own CSS via an HTML tag
+with an id `cljs-test-display-style`.
+
+For Example:
+
+```html
+<html>
+  <head>
+    <!-- override injected css -->
+	<link id="cljs-test-display-style" type="text/css" href="css/my-css.css">
+  </head>
+  <body>
+  
+	;; you can also place CSS here if you only wish to ammend the CSS
+	
+    <div id="app"></div>
+    <script src="[path to your compiled cljs]" type="text/javascript"></script>
+  </body>
+</html>
+```
+
 
 ## Development
 
