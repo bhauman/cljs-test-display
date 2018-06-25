@@ -130,16 +130,16 @@ You can configure the behavior by adding keys to the
  ...
  :closure-defines {
     ;; set the element id of where the tests will mount
-	cljs-test-display.core/root-node-id "test-app" ;; default "app"
+    cljs-test-display.core/root-node-id "test-app" ;; default "app"
 	
-	;; disable the favicon changing behavior
-	cljs-test-display.core/change-favicon false    ;; default true
+    ;; disable the favicon changing behavior
+    cljs-test-display.core/change-favicon false    ;; default true
 	
-	;; disable the system notifications
-	cljs-test-display.core/notifications  false    ;; default true
+    ;; disable the system notifications
+    cljs-test-display.core/notifications  false    ;; default true
 	
-	;; enable the printing of test results
-	cljs-test-display.core/printing       true     ;; default false
+    ;; enable the printing of test results
+    cljs-test-display.core/printing       true     ;; default false
  }}
 ```
 
