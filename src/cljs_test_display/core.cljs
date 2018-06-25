@@ -400,20 +400,23 @@
                        'example.core-other-test)"
   ([] (init! nil))
   ([app-node-id]
-   (when app-node-id
-     (assert (or (string? app-node-id)
-                 (symbol? app-node-id)
-                 (keyword? app-node-id))
-             "Must provide an something we can call cljs.core/name on.")
-     (set! root-node-id (name app-node-id)))
-   (assert (gdom/getElement (name root-node-id))
-           (str "cljs-test-display: Element with id "
-                (pr-str root-node-id)
-                " does not exist."))
-   (when notifications (notify/ask-permission!))
-   (insert-style!)
-   (register-document-events!)
-   (set! (.-innerHTML (root-app-node)) "")
-   (add-header-node!)
-   (initialize-state!)
-   (empty-env)))
+   (if (nil? goog/global.document) ;; if not in HTML env ingore display
+     (cljs.test/empty-env)
+     (do
+       (when app-node-id
+         (assert (or (string? app-node-id)
+                     (symbol? app-node-id)
+                     (keyword? app-node-id))
+                 "Must provide an something we can call cljs.core/name on.")
+         (set! root-node-id (name app-node-id)))
+       (assert (gdom/getElement (name root-node-id))
+               (str "cljs-test-display: Element with id "
+                    (pr-str root-node-id)
+                    " does not exist."))
+       (when notifications (notify/ask-permission!))
+       (insert-style!)
+       (register-document-events!)
+       (set! (.-innerHTML (root-app-node)) "")
+       (add-header-node!)
+       (initialize-state!)
+       (empty-env)))))
