@@ -121,7 +121,7 @@ Example `resources/public/tests.html` file:
 
 ## Configuration
 
-You can configure the behavior by adding keys to the
+You can configure `cljs-test-display` by adding keys to the
 `:closure-defines` key in your ClojureScript compiler options.
 
 ```clojure
