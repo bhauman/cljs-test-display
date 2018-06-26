@@ -20,12 +20,14 @@
 (defn success []
   (with-permission "granted"
     #(js/Notification. "All CLJS Tests Passed"
-                       #js {:icon green-url})))
+                       #js {:icon green-url :silent true})))
+
 
 (defn failure [{:keys [error fail]}]
   (with-permission "granted"
     #(js/Notification. "CLJS Tests Failed"
                        #js {:icon red-url
+                            :silent true
                             :body (str
                                    (when fail
                                      (str fail " failures "))
