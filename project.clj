@@ -1,4 +1,4 @@
-(defproject com.bhauman/cljs-test-display "0.1.1-SNAPSHOT"
+(defproject com.bhauman/cljs-test-display "0.1.1"
   :description "Provides a visual display for ClojureScript tests."
   :url "https://github.com/bhauman/cljs-test-display"
   :license {:name "Eclipse Public License"

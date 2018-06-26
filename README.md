@@ -57,7 +57,7 @@ browser you can use `cljs-test-display`.
 
 ### Dependencies
 
-You will need to add `[com.bhauman/cljs-test-display "0.1.0"]` to your
+You will need to add `[com.bhauman/cljs-test-display "0.1.1"]` to your
 project's dependencies *along with* a recent version of
 ClojureScript. It has been tested with
 `[org.clojure/cojurescript 1.10.238]` and above, but it should work
