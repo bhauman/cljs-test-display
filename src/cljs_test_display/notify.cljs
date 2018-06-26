@@ -22,7 +22,6 @@
     #(js/Notification. "All CLJS Tests Passed"
                        #js {:icon green-url :silent true})))
 
-
 (defn failure [{:keys [error fail]}]
   (with-permission "granted"
     #(js/Notification. "CLJS Tests Failed"
