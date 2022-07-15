@@ -175,7 +175,7 @@ pre {
     margin: 0px;
     word-break: normal;
     word-wrap: normal;
-    overflow-x: scroll;
+    overflow-x: auto;
     margin-top: 2px;
     margin-bottom: 2px;    
 }
