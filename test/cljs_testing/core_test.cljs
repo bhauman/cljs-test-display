@@ -74,7 +74,8 @@
     (is (= 45 (reduce + (range 10))))
     (is (= 45 (reduce + (range 10))))
     (is (= 45 (reduce + (range 10))))
-    (is (= 45 (reduce + (range 10))))    
+    (is (= 45 (reduce + (range 10))))
+    (is (= (range 20) (range 19)))
     )
 
   (testing "a should be like b"
