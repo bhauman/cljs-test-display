@@ -187,17 +187,15 @@ pre code {
 }
 
 .actual {
+    border-top: 1px dashed rgb(236, 196, 196);
     position: relative;
-}
-
-.actual pre {
-    margin-left: 20px;
 }
 
 .actual .arrow {
     position: absolute;
     font-size: 0.8em;
     top: 4px;
+    left: -18px;
 }
 
 /* errors */
